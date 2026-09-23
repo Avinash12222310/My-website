@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Memories — For Srishti</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<canvas id="confetti-canvas"></canvas>
+
+<nav class="site-nav">
+  <div class="brand">For Srishti</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="letter.html">Letter</a></li>
+    <li><a href="memories.html" class="active">Memories</a></li>
+    <li><a href="surprise.html">Surprise</a></li>
+    <li><a href="finale.html">Finish</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero" style="padding-bottom:5vh;">
+  <div class="stars" id="stars"></div>
+  <div class="eyebrow">stop two</div>
+  <h1><em>Memories</em></h1>
+  <p>Tap a card to flip it back.</p>
+</section>
+
+<section class="section" style="padding-top:6vh;">
+  <div class="card-grid">
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">one</div><div>Your laugh</div><div class="tap">tap</div></div>
+        <div class="flip-face flip-back">Loud, unfiltered, and it gets everyone else laughing before they even know the joke.</div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">two</div><div>Your stubbornness</div><div class="tap">tap</div></div>
+        <div class="flip-face flip-back">Impossible in an argument, unstoppable when you've decided to get something done.</div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">three</div><div>How you remember things</div><div class="tap">tap</div></div>
+        <div class="flip-face flip-back">The small details other people forget — you hold onto them, and it means something later.</div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">four</div><div>Your bad days</div><div class="tap">tap</div></div>
+        <div class="flip-face flip-back">Even those don't last long on you. You bounce back faster than most people I know.</div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">five</div><div>Being my sister</div><div class="tap">tap</div></div>
+        <div class="flip-face flip-back">Simple as that. I got lucky, and I don't say it enough out loud.</div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">six</div><div>This exact moment</div><div class="tap">tap</div></div>
+        <div class="flip-face flip-back">You, reading this, probably smiling a little even if you won't admit it.</div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:2.6rem;">
+    <a class="card-link" href="surprise.html" style="display:inline-block; max-width:280px;">
+      <h3>Next: The Surprise →</h3>
+      <p>Pop every balloon.</p>
+    </a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="made">made with love by Avinash Singh</div>
+  <div>for my sister, Srishti</div>
+</footer>
+
+<script src="assets/script.js"></script>
+<script>
+  paintStars(document.getElementById('stars'), 26);
+</script>
+</body>
+</html>

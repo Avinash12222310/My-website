@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For Srishti</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<canvas id="confetti-canvas"></canvas>
+
+<nav class="site-nav">
+  <div class="brand">For Srishti</div>
+  <ul>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="letter.html">Letter</a></li>
+    <li><a href="memories.html">Memories</a></li>
+    <li><a href="surprise.html">Surprise</a></li>
+    <li><a href="finale.html">Finish</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <div class="stars" id="stars"></div>
+  <div class="eyebrow">a little something for</div>
+  <h1>Srishti <em>Singh</em></h1>
+  <p>Before you go anywhere else — shake the jar. There's a wish waiting inside for you.</p>
+
+  <div class="jar-wrap" id="jarWrap" role="button" tabindex="0" aria-label="Open the wish jar">
+    <div class="jar-lid"></div>
+    <div class="jar-body">
+      <span class="jar-star" style="left:20%;">✨</span>
+      <span class="jar-star" style="left:45%; --jx:-20px;">⭐</span>
+      <span class="jar-star" style="left:65%; --jx:24px;">✨</span>
+      <span class="jar-star" style="left:35%; --jx:30px;">🌟</span>
+      <span class="jar-star" style="left:55%; --jx:-14px;">✨</span>
+    </div>
+  </div>
+  <div class="tap-hint">tap the jar</div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <h2>This little site has four stops</h2>
+    <p>Go in order, or don't — it's your surprise.</p>
+  </div>
+  <div class="card-grid-nav">
+    <a class="card-link" href="letter.html">
+      <h3>The Letter</h3>
+      <p>A few things I wanted to actually say, instead of just texting them.</p>
+    </a>
+    <a class="card-link" href="memories.html">
+      <h3>Memories</h3>
+      <p>Six little cards. Tap each one to flip it.</p>
+    </a>
+    <a class="card-link" href="surprise.html">
+      <h3>The Surprise</h3>
+      <p>Pop every balloon. Don't skip any.</p>
+    </a>
+    <a class="card-link" href="finale.html">
+      <h3>The Finish</h3>
+      <p>Save this one for last.</p>
+    </a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="made">made with love by Avinash Singh</div>
+  <div>for my sister, Srishti — the best one I've got</div>
+</footer>
+
+<script src="assets/script.js"></script>
+<script>
+  paintStars(document.getElementById('stars'), 44);
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Surprise — For Srishti</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<canvas id="confetti-canvas"></canvas>
+
+<nav class="site-nav">
+  <div class="brand">For Srishti</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="letter.html">Letter</a></li>
+    <li><a href="memories.html">Memories</a></li>
+    <li><a href="surprise.html" class="active">Surprise</a></li>
+    <li><a href="finale.html">Finish</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero" style="padding-bottom:5vh;">
+  <div class="stars" id="stars"></div>
+  <div class="eyebrow">stop three</div>
+  <h1>The <em>Surprise</em></h1>
+  <p>Pop every balloon — each one is hiding something.</p>
+</section>
+
+<section class="section" style="padding-top:4vh;">
+  <div class="balloon-field" id="balloonField">
+    <div class="balloon" style="left:4%; top:10%; background:#F0876B; animation-delay:.1s;" data-msg="m1"></div>
+    <div class="balloon" style="left:20%; top:40%; background:#E8C468; animation-delay:.6s;" data-msg="m2"></div>
+    <div class="balloon" style="left:38%; top:6%; background:#7FB0A0; animation-delay:.3s;" data-msg="m3"></div>
+    <div class="balloon" style="left:55%; top:34%; background:#B79FD1; animation-delay:.9s;" data-msg="m4"></div>
+    <div class="balloon" style="left:72%; top:4%; background:#E27D93; animation-delay:.2s;" data-msg="m5"></div>
+    <div class="balloon" style="left:86%; top:38%; background:#F0876B; animation-delay:.7s;" data-msg="m6"></div>
+
+    <div class="balloon-msg" id="m1" style="left:1%; top:44%;">You make ordinary days feel less ordinary.</div>
+    <div class="balloon-msg" id="m2" style="left:17%; top:74%;">I'm proud of you more often than I say.</div>
+    <div class="balloon-msg" id="m3" style="left:35%; top:40%;">You're stronger than the version of you that worries.</div>
+    <div class="balloon-msg" id="m4" style="left:52%; top:68%;">Whatever you're chasing right now — I think you'll get it.</div>
+    <div class="balloon-msg" id="m5" style="left:69%; top:38%;">You're allowed to rest. You don't owe anyone constant strength.</div>
+    <div class="balloon-msg" id="m6" style="left:80%; top:72%;">Thank you for being exactly who you are, unapologetically.</div>
+  </div>
+
+  <p id="doneNote" style="text-align:center; margin-top:2rem; color:#71667f; opacity:0; transition:opacity .5s ease;">
+    You found them all. One more stop left.
+  </p>
+
+  <div style="text-align:center; margin-top:1.6rem;">
+    <a class="card-link" href="finale.html" style="display:inline-block; max-width:280px;">
+      <h3>Next: The Finish →</h3>
+      <p>Save this one for last.</p>
+    </a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="made">made with love by Avinash Singh</div>
+  <div>for my sister, Srishti</div>
+</footer>
+
+<script src="assets/script.js"></script>
+<script>
+  paintStars(document.getElementById('stars'), 26);
+
+  const balloons = document.querySelectorAll('.balloon');
+  const doneNote = document.getElementById('doneNote');
+  let poppedCount = 0;
+  balloons.forEach(b=>{
+    b.addEventListener('click', ()=>{
+      poppedCount++;
+      if(poppedCount === balloons.length){
+        setTimeout(()=>{ doneNote.style.opacity = 1; }, 400);
+      }
+    }, { once:true });
+  });
+</script>
+</body>
+</html>
