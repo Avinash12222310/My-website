@@ -1,0 +1,18 @@
+{
+  "name": "A Birthday Surprise for Srishti",
+  "short_name": "For Srishti",
+  "description": "A birthday surprise made with sibling pride for Srishti's 26th year.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F4FAF8",
+  "theme_color": "#15586B",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

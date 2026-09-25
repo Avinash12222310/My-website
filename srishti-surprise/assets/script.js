@@ -13,7 +13,7 @@ function paintStars(container, count){
 // ---------- confetti engine (shared canvas) ----------
 const confettiCanvas = document.getElementById('confetti-canvas');
 let confettiCtx, particles = [];
-const confettiColors = ['#F0876B','#E8C468','#7FB0A0','#B79FD1','#fff'];
+const confettiColors = ['#E76F51','#F2BE49','#74AFA1','#9BC8CC','#fff'];
 
 if(confettiCanvas){
   confettiCtx = confettiCanvas.getContext('2d');
@@ -72,6 +72,28 @@ function burstConfetti(x, y, count){
 
 // ---------- flip cards (memories page) ----------
 document.addEventListener('DOMContentLoaded', ()=>{
+  let installPrompt;
+  const installButton = document.getElementById('installAppBtn');
+  window.addEventListener('beforeinstallprompt', event=>{
+    event.preventDefault();
+    installPrompt = event;
+    if(installButton) installButton.hidden = false;
+  });
+
+  if(installButton){
+    installButton.addEventListener('click', async ()=>{
+      if(!installPrompt) return;
+      installPrompt.prompt();
+      await installPrompt.userChoice;
+      installPrompt = null;
+      installButton.hidden = true;
+    });
+  }
+
+  if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
+  }
+
   document.querySelectorAll('.flip-card').forEach(card=>{
     card.addEventListener('click', ()=> card.classList.toggle('flipped'));
   });

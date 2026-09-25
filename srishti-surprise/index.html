@@ -3,7 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#15586B">
+<meta name="description" content="A birthday surprise for Srishti, made with sibling pride for her 26th year.">
 <title>For Srishti</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -15,6 +19,7 @@
     <li><a href="index.html" class="active">Home</a></li>
     <li><a href="letter.html">Letter</a></li>
     <li><a href="memories.html">Memories</a></li>
+    <li><a href="chapter-26.html">Chapter 26</a></li>
     <li><a href="surprise.html">Surprise</a></li>
     <li><a href="finale.html">Finish</a></li>
   </ul>
@@ -22,9 +27,9 @@
 
 <section class="page-hero">
   <div class="stars" id="stars"></div>
-  <div class="eyebrow">a little something for</div>
+  <div class="eyebrow">a birthday surprise for my sister</div>
   <h1>Srishti <em>Singh</em></h1>
-  <p>Before you go anywhere else — shake the jar. There's a wish waiting inside for you.</p>
+  <p>Here's to 26 years of becoming more yourself. Shake the jar; a birthday wish is waiting inside.</p>
 
   <div class="jar-wrap" id="jarWrap" role="button" tabindex="0" aria-label="Open the wish jar">
     <div class="jar-lid"></div>
@@ -41,8 +46,8 @@
 
 <section class="section">
   <div class="section-head">
-    <h2>This little site has four stops</h2>
-    <p>Go in order, or don't — it's your surprise.</p>
+    <h2>Six little birthday chapters</h2>
+    <p>Made by your sibling, with a lot of pride and a little confetti.</p>
   </div>
   <div class="card-grid-nav">
     <a class="card-link" href="letter.html">
@@ -53,6 +58,10 @@
       <h3>Memories</h3>
       <p>Six little cards. Tap each one to flip it.</p>
     </a>
+    <a class="card-link" href="chapter-26.html">
+      <h3>Chapter 26</h3>
+      <p>Twenty-six wishes for the year ahead.</p>
+    </a>
     <a class="card-link" href="surprise.html">
       <h3>The Surprise</h3>
       <p>Pop every balloon. Don't skip any.</p>
@@ -62,11 +71,18 @@
       <p>Save this one for last.</p>
     </a>
   </div>
+  <div class="app-install">
+    <p><strong>Take the birthday surprise with you.</strong><br>Install it on your phone and keep it close, even offline.</p>
+    <button class="install-button" id="installAppBtn" type="button" hidden>Install app</button>
+  </div>
+  <details class="install-help">
+    <summary>How to add it to your phone</summary>
+    <p>On iPhone, open this page in Safari, tap Share, then Add to Home Screen. On Android, open the browser menu and choose Install app or Add to Home screen.</p>
+  </details>
 </section>
 
 <footer class="site-footer">
-  <div class="made">made with love by Avinash Singh</div>
-  <div>for my sister, Srishti — the best one I've got</div>
+  <div>for my sister, Srishti — always proud to be on your team</div>
 </footer>
 
 <script src="assets/script.js"></script>
